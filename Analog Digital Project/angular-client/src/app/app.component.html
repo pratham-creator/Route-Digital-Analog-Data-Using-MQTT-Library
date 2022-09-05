@@ -1,0 +1,37 @@
+<div class="shadow-lg p-5 m-3">
+    <mat-form-field appearance="fill" >
+    <mat-label>Select</mat-label>
+    <mat-select [(ngModel)]="idValue" >
+        <mat-option value="0">0</mat-option>
+        <mat-option value="1">1</mat-option>
+        <mat-option value="2">2</mat-option>
+        <mat-option value="3">3</mat-option>
+        <mat-option value="4">4</mat-option>
+        <mat-option value="5">5</mat-option>
+        <mat-option value="6">6</mat-option>
+        <mat-option value="7">7</mat-option>
+        <mat-option value="8">8</mat-option>
+        <mat-option value="9">9</mat-option>
+    </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-slide-toggle [(ngModel)]="value" ></mat-slide-toggle>
+
+    <mat-slider thumbLabel
+    tickInterval="1000"
+    step="0.1"
+    min="0"
+    max="100"
+    aria-label="units" [(ngModel)]="valueAnalog" class="m-4"></mat-slider>
+    <br>
+
+    <label for="analog" class="h2">Analog: {{a}}</label><br>
+    <label for="digital" class="h2">Digital: {{d}}</label>
+
+    <br>
+    <button type="submit" (click)="submitDigital()" class="btn btn-primary m-2">Submit Digital</button>
+    <button type="submit" (click)="submitAnalog()" class="btn btn-primary m-2">Submit Analog</button>
+    <button type="submit" (click)="readDigital()" class="btn btn-primary m-2">Read Digital</button>
+    <button type="submit" (click)="readAnalog()" class="btn btn-primary m-2">Read Analog</button>
+    
+</div>
